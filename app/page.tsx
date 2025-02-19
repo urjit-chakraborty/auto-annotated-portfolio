@@ -14,6 +14,9 @@ import {
 } from 'swiper/modules';
 import smedia from '@/components/social-media-6557345_1280.jpg';
 import tech from '@/components/engineer-4922413_1920.jpg';
+import bagel from '@/components/bagel-min.jpg';
+import blend from '@/components/blend.png';
+import spice from '@/components/spice.jpg';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -31,12 +34,12 @@ import {
   Star,
   StarHalf,
   ChartLine,
-  Cpu
+  Cpu,
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
-import Image from 'next/image'
+import Image from 'next/image';
 import { Navbar } from '@/components/navbar';
 
 const services = [
@@ -61,21 +64,22 @@ const services = [
     icon: Megaphone,
     image:
       'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80',
-    description: 'Driving traffic, leads, and sales with data-driven strategies. From SEO to ads, we help your business thrive in the digital world.',
+    description:
+      'Driving traffic, leads, and sales with data-driven strategies. From SEO to ads, we help your business thrive in the digital world.',
   },
   {
     title: 'Social Media Management',
     icon: ChartLine,
-    image:
-      smedia,
-    description: 'Elevating your online presence with strategic content, engagement, and growth. We handle the posts, you enjoy the results.',
+    image: smedia,
+    description:
+      'Elevating your online presence with strategic content, engagement, and growth. We handle the posts, you enjoy the results.',
   },
   {
     title: 'Custom Tech Solutions',
     icon: Cpu,
-    image:
-      tech,
-    description: 'Building innovative, tailor-made software and tools to solve your unique business challenges. Your ideas, our expertise.',
+    image: tech,
+    description:
+      'Building innovative, tailor-made software and tools to solve your unique business challenges. Your ideas, our expertise.',
   },
 ];
 
@@ -147,9 +151,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="hero" className="min-h-screen relative bg-sky-30">
-        
-        
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-24 pb-16 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -209,11 +210,11 @@ export default function Home() {
 
             <div className="relative h-[400px] lg:h-[600px]">
               <img
-                src="https://images.unsplash.com/photo-1713946598474-064f59b7df6d?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Airplane in the sky"
+                src="https://i.postimg.cc/VNj7hMqR/fffinalhero.png"
+                alt="Person celebrating his success from working with Kontrail"
                 className="object-cover w-full h-full rounded-2xl shadow-2xl"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-2xl" />
+              {/*<div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-2xl" />--!>*/}
             </div>
           </div>
 
@@ -272,14 +273,11 @@ export default function Home() {
             slidesPerView={3}
             navigation
             loop={true}
-             breakpoints={{
-            0: {slidesPerView: 1},
-            480: {slidesPerView: 1,
-                   spaceBetween: 16},
-            800: {slidesPerView: 2,
-                   spaceBetween: 16},
-            1024:{slidesPerView: 3,
-                   spaceBetween: 16}
+            breakpoints={{
+              0: { slidesPerView: 1 },
+              480: { slidesPerView: 1, spaceBetween: 16 },
+              800: { slidesPerView: 2, spaceBetween: 16 },
+              1024: { slidesPerView: 3, spaceBetween: 16 },
             }}
             pagination={{ clickable: true }}
             autoplay={{
@@ -308,7 +306,6 @@ export default function Home() {
                     <p className="text-muted-foreground mb-4">
                       {service.description}
                     </p>
-                    
                   </div>
                 </Card>
               </SwiperSlide>
@@ -327,33 +324,30 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
-                name: 'Khamlash Johnson',
-                role: 'Founder, Bagel Bakery Salisbury',
-                image:
-                  'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&q=80',
+                name: 'Bagel Bakery Café Salisbury',
+                role: 'Café with fresh bagels and pastries',
+                image: bagel,
                 quote:
-                  'Kontrail transformed our digital presence. Their innovative solutions helped us achieve record growth.',
+                  'Kontrail transformed our business with innovative solutions. We have achieved record growth with the numerous automation and management applications they have built for us.',
               },
               {
-                name: 'Suparana Brinda Nandi',
-                role: 'Blending Cultures Society Corp.',
-                image:
-                  'https://media.licdn.com/dms/image/v2/D4D03AQG8inN1-S6TBQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1672323941680?e=1745452800&v=beta&t=KZYQfkFbXvV161ixRRZDb8Fvq_3dYgQ5fmKbA1AQ1Ho',
+                name: 'Blending Cultures Society Corp.',
+                role: 'Nonprofit celebrating culture & diversity',
+                image: blend,
                 quote:
-                  "The team's attention to detail and creative approach sets them apart. They're true partners in our success.",
+                  "The team's attention to detail and creative approach sets them apart. Kontrail developed our website, designed our logo, and they create flyers and graphics for new events and activites we host. ",
               },
               {
-                name: 'Emily Rodriguez',
-                role: 'Founder, DesignHub',
-                image:
-                  'https://scontent-iad3-1.xx.fbcdn.net/v/t39.30808-6/468908528_10226795394498456_8388497912859480452_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=6ee11a&_nc_ohc=2rZL0s7DVCkQ7kNvgHrR9x0&_nc_oc=AdglkETYVO04i3mZnsGi-5IB4ksy-UNnFY65Yoh8kCYDO0bB5YIfumIBF9BVHedNf_I&_nc_zt=23&_nc_ht=scontent-iad3-1.xx&_nc_gid=ANwHBqNJBk6LK2LDYw1Nm6J&oh=00_AYBk9OXsrGM_5_ujemZK77pMA3-rDjshZx4eTy_43_umvQ&oe=67BC1F48',
+                name: 'Spice Bazaar Salisbury',
+                role: 'International grocery store',
+                image: spice,
                 quote:
-                  'Working with Kontrail has been a game-changer. They deliver excellence at every step.',
+                  'Kontrail delivers brilliant and timely results that transformed our business, exceeding expectation every time. They set up our social media accounts, built our website, and created graphics for our store.',
               },
             ].map((testimonial, i) => (
               <Card key={i} className="p-6">
                 <div className="flex items-center gap-4 mb-4">
-                  <img
+                  <Image
                     src={testimonial.image}
                     alt={testimonial.name}
                     className="w-12 h-12 rounded-full object-cover"
@@ -372,8 +366,7 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>           
-           
+      </section>
 
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-16 relative overflow-hidden items-center">
@@ -383,24 +376,20 @@ export default function Home() {
             <div className="space-y-4">
               <div className="flex items-center space-x-2">
                 <span className="inline-flex items-center justify-center w-32">
-              <Image
-                src={wLogo}
-                width="12"
-                alt="N"
-                height="12"
-                className="w-auto h-full"
-              />
-            </span>
+                  <Image
+                    src={wLogo}
+                    width="12"
+                    alt="N"
+                    height="12"
+                    className="w-auto h-full"
+                  />
+                </span>
               </div>
 
               <div className="gap-0">
                 <p className="text-gray-400">Streamline Your Strategy,</p>
                 <p className="text-gray-400">Leave Your Mark.</p>
               </div>
-
-              
-               
-              
             </div>
 
             {/* Contact */}
