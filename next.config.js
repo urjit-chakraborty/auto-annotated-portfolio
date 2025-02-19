@@ -1,10 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    env: {
-        stackbitPreview: process.env.STACKBIT_PREVIEW
-    },
-    trailingSlash: true,
-    reactStrictMode: true
+  output: 'export',
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
+  images: { unoptimized: true },
 };
 
 module.exports = nextConfig;
