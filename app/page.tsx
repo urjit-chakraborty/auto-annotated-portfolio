@@ -163,7 +163,7 @@ export default function Home() {
               </p>
 
               <div className="space-y-4">
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="hidden sm:flex sm:flex-row gap-4">
                   <Input
                     type="text"
                     placeholder="Your name"
@@ -191,16 +191,17 @@ export default function Home() {
                     email: email,
                   })}
                 >
-                  Book my 100% free consultation
+                  <span className="sm:hidden">Book Free Consultation</span>
+                  <span className="hidden sm:inline">Book my 100% free consultation</span>
                   <Plane className="ml-2 h-4 w-4" />
                 </Button>
-                <p className="text-sm text-muted-foreground text-center">
+                <p className="text-sm text-muted-foreground text-center hidden sm:block">
                   We'll never share your info with anyone.
                 </p>
               </div>
             </div>
 
-            <div className="relative h-[400px] lg:h-[600px]">
+            <div className="relative h-[350px] lg:h-[600px]">
               <img
                 src="https://i.postimg.cc/VNj7hMqR/fffinalhero.png"
                 alt="Person celebrating his success from working with Kontrail"
