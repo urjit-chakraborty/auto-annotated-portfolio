@@ -143,10 +143,10 @@ export default function Home() {
 
       {/* Hero Section */}
       <section id="hero" className="min-h-screen relative">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-24 pb-16 relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 sm:pt-24 pb-16 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8 ">
-              <p className="text-sm font-semibold text-primary mb-2 tracking-wide uppercase flex items-center gap-1 hidden sm:flex ">
+            <div className="pt-4 sm:pt-0 space-y-3 sm:space-y-8">
+              <p className="text-sm font-semibold text-primary tracking-wide uppercase flex items-center gap-1 hidden sm:flex">
                 <Clock className="w-8 h-8 md:w-4 md:h-4" />
                 <DollarSign className="w-8 h-8 md:w-4 md:h-4" />
                 Our clients have saved over thousands of hours and dollars
@@ -200,11 +200,11 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative h-[300px] lg:h-[600px]">
+            <div className="relative h-[400px] lg:h-[600px]">
               <img
                 src="https://i.postimg.cc/VNj7hMqR/fffinalhero.png"
                 alt="Person celebrating his success from working with Kontrail"
-                className="object-cover w-full h-full rounded-2xl shadow-2xl"
+                className="object-cover w-full h-full rounded-2xl shadow-2xl object-top sm:object-center"
               />
               <div className="absolute inset-0 rounded-2xl" />
             </div>
