@@ -14,9 +14,6 @@ import {
 } from 'swiper/modules';
 import smedia from '@/components/social-media-6557345_1280.jpg';
 import tech from '@/components/engineer-4922413_1920.jpg';
-import bagel from '@/components/bagel-min.jpg';
-import blend from '@/components/blend.png';
-import spice from '@/components/spice.jpg';
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -34,53 +31,47 @@ import {
   Star,
   StarHalf,
   ChartLine,
-  Cpu,
+  Cpu
 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import Image from 'next/image';
 import { Navbar } from '@/components/navbar';
-
+import bagel from '@/components/bagel-min.jpg';
+import blend from '@/components/blend.png';
+import spice from '@/components/spice.jpg';
 const services = [
   {
     title: 'Web Development',
     icon: Code,
-    image:
-      'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80',
-    description:
-      'Crafting stunning websites tailored to your brand. From wireframes to seamless functionality, bring your vision to life.',
+    image: 'https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&q=80',
+    description: 'Crafting stunning websites tailored to your brand. From wireframes to seamless functionality, bring your vision to life.'
   },
   {
     title: 'Design Services',
     icon: Palette,
-    image:
-      'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80',
-    description:
-      'Transforming ideas into captivating visuals. Whether it’s logos, branding, or graphics, we design to impress and inspire.',
+    image: 'https://images.unsplash.com/photo-1561070791-2526d30994b5?auto=format&fit=crop&q=80',
+    description: 'Transforming ideas into captivating visuals. Whether it\'s logos, branding, or graphics, we design to impress and inspire.'
   },
   {
     title: 'Digital Marketing',
     icon: Megaphone,
-    image:
-      'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80',
-    description:
-      'Driving traffic, leads, and sales with data-driven strategies. From SEO to ads, we help your business thrive in the digital world.',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80',
+    description: 'Driving traffic, leads, and sales with data-driven strategies. From SEO to ads, we help your business thrive in the digital world.'
   },
   {
     title: 'Social Media Management',
     icon: ChartLine,
     image: smedia,
-    description:
-      'Elevating your online presence with strategic content, engagement, and growth. We handle the posts, you enjoy the results.',
+    description: 'Elevating your online presence with strategic content, engagement, and growth. We handle the posts, you enjoy the results.'
   },
   {
     title: 'Custom Tech Solutions',
     icon: Cpu,
     image: tech,
-    description:
-      'Building innovative, tailor-made software and tools to solve your unique business challenges. Your ideas, our expertise.',
-  },
+    description: 'Building innovative, tailor-made software and tools to solve your unique business challenges. Your ideas, our expertise.'
+  }
 ];
 
 export default function Home() {
@@ -150,16 +141,16 @@ export default function Home() {
       <Navbar activeSection={activeSection} />
 
       {/* Hero Section */}
-      <section id="hero" className="min-h-screen relative bg-sky-30">
+      <section id="hero" className="min-h-screen relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 md:pt-24 pb-16 relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
-              <p className="text-sm font-semibold text-primary mb-2 tracking-wide uppercase flex items-center gap-1">
+            <div className="space-y-8 ">
+              <p className="text-sm font-semibold text-primary mb-2 tracking-wide uppercase flex items-center gap-1 hidden sm:flex ">
                 <Clock className="w-8 h-8 md:w-4 md:h-4" />
                 <DollarSign className="w-8 h-8 md:w-4 md:h-4" />
                 Our clients have saved over thousands of hours and dollars
               </p>
-              <h1 className="text-4xl md:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-[#3775d2]">
+              <h1 className="text-3xl md:text-6xl font-bold leading-tight bg-clip-text text-transparent bg-gradient-to-r from-primary to-[#3775d2]">
                 Leave your generic templates & pricey subscriptions behind
               </h1>
 
@@ -208,17 +199,17 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="relative h-[400px] lg:h-[600px]">
+            <div className="relative h-[300px] lg:h-[600px]">
               <img
                 src="https://i.postimg.cc/VNj7hMqR/fffinalhero.png"
                 alt="Person celebrating his success from working with Kontrail"
-                className="object-cover w-full h-full rounded-2xl shadow-2xl"
+                className="object-contain md:object-cover w-full h-full rounded-2xl shadow-2xl"
               />
-              {/*<div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent rounded-2xl" />--!>*/}
+              <div className="absolute inset-0 rounded-2xl" />
             </div>
           </div>
 
-          {/* Social Proof Section - Now centered below hero content */}
+          {/* Social Proof Section */}
           <div className="max-w-4xl mx-auto mt-16 pt-8 border-t">
             <div className="grid md:grid-cols-2 gap-12">
               {/* Reviews */}
@@ -241,17 +232,17 @@ export default function Home() {
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg"
                     alt="Google Partner"
-                    className="h-9 w-auto "
+                    className="h-9 w-auto"
                   />
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/2/25/Microsoft_icon.svg"
                     alt="Microsoft Certified"
-                    className="h-8 w-auto "
+                    className="h-8 w-auto"
                   />
                   <img
                     src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Adobe_Corporate_logo.svg"
                     alt="Adobe Solution Partner"
-                    className="h-8 w-auto "
+                    className="h-8 w-auto"
                   />
                 </div>
                 <p className="text-sm text-muted-foreground text-center">
@@ -264,7 +255,7 @@ export default function Home() {
       </section>
 
       {/* Our Work Section */}
-      <section id="work" className="min-h-screen bg-muted/30">
+      <section id="work" className="min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <h2 className="text-4xl font-bold mb-16 text-center">Our Work</h2>
           <Swiper
@@ -277,7 +268,7 @@ export default function Home() {
               0: { slidesPerView: 1 },
               480: { slidesPerView: 1, spaceBetween: 16 },
               800: { slidesPerView: 2, spaceBetween: 16 },
-              1024: { slidesPerView: 3, spaceBetween: 16 },
+              1024: { slidesPerView: 3, spaceBetween: 16 }
             }}
             pagination={{ clickable: true }}
             autoplay={{
@@ -286,7 +277,7 @@ export default function Home() {
             }}
           >
             {services.map((service, index) => (
-              <SwiperSlide key={`${service.title}-${index}`}>
+              <SwiperSlide key={index}>
                 <Card className="overflow-hidden group">
                   <div className="relative h-56">
                     <Image
@@ -321,7 +312,7 @@ export default function Home() {
             What Our Clients Say
           </h2>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 name: 'Bagel Bakery Café Salisbury',
@@ -369,12 +360,12 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer className="bg-gray-900 text-white py-16 relative overflow-hidden items-center">
+      <footer className="bg-gray-900 text-white py-16 relative overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 ">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center justify-items-center text-center md:text-left">
             {/* Company Info */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-2">
+            <div className="space-y-4 flex flex-col items-center md:items-start">
+              <div className="flex items-center justify-center">
                 <span className="inline-flex items-center justify-center w-32">
                   <Image
                     src={wLogo}
@@ -386,14 +377,14 @@ export default function Home() {
                 </span>
               </div>
 
-              <div className="gap-0">
+              <div className="text-center md:text-left">
                 <p className="text-gray-400">Streamline Your Strategy,</p>
                 <p className="text-gray-400">Leave Your Mark.</p>
               </div>
             </div>
 
             {/* Contact */}
-            <div>
+            <div className="flex flex-col items-center md:items-start">
               <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
               <ul className="space-y-3">
                 <li className="flex items-center space-x-3">
@@ -410,9 +401,7 @@ export default function Home() {
                       d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                     />
                   </svg>
-                  <span className="text-gray-400">
-                    kontrailagency@gmail.com
-                  </span>
+                  <span className="text-gray-400">kontrailagency@gmail.com</span>
                 </li>
                 <li className="flex items-center space-x-3">
                   <svg
@@ -457,8 +446,8 @@ export default function Home() {
           </div>
 
           <div className="mt-12 pt-8 border-t border-gray-800">
-            <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-              <p className="text-gray-400 text-sm">
+            <div className="flex flex-col items-center space-y-4">
+              <p className="text-gray-400 text-sm text-center">
                 © {new Date().getFullYear()} Kontrail LLC. All rights reserved.
               </p>
               <div className="flex space-x-6">
