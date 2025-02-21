@@ -203,7 +203,7 @@ export default function Home() {
               <img
                 src="https://i.postimg.cc/VNj7hMqR/fffinalhero.png"
                 alt="Person celebrating his success from working with Kontrail"
-                className="object-contain md:object-cover w-full h-full rounded-2xl shadow-2xl"
+                className="object-cover w-full h-full rounded-2xl shadow-2xl"
               />
               <div className="absolute inset-0 rounded-2xl" />
             </div>
