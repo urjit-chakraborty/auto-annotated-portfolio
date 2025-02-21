@@ -111,7 +111,7 @@ export default function Home() {
   }, []);
 
   return (
-    <link rel="icon" href="/favicon.ico" sizes="any" />
+    
     <main className="min-h-screen relative">
       <style jsx global>{`
         /* Custom scrollbar */
